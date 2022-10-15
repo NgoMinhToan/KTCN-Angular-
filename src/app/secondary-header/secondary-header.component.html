@@ -1,0 +1,13 @@
+<div class="menu">
+    <li matRipple matRippleColor="" [class]="category.active" *ngFor="let category of categories">
+        <!-- class="active"-->
+        <div class="category-wrap">
+            <span class="icon-chips">
+                <span class="icon">
+                    <mat-icon aria-hidden="false" [fontIcon]="category?.icon!"></mat-icon>
+                </span>
+            </span>
+            <p>{{category?.name}}</p>
+        </div>
+    </li>
+</div>

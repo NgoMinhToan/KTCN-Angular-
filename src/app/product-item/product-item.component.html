@@ -1,21 +1,22 @@
 <div class="card-item">
-    <div class="card-logo">
-        <img mat-card-image class="card-header-image" [src]="product?.image" alt="Item photo">
-    </div>
-    <div class="card-body">
-        <p class="title-card">
-            {{title}}
-        </p>
-        <p class="desc-card">{{desc}}</p>
-        <div class="extra-content">
-            <span>Luot mua: {{product?.rating?.count}}</span>
-            <span>Rating: {{product?.rating?.rate}}</span>
+    <div class="card-content">
+        <div class="card-logo">
+            <img mat-card-image class="card-header-image" [src]="product?.image" alt="Item photo">
+        </div>
+        <div class="card-body">
+            <p class="title-card">
+                {{title}}
+            </p>
+            <p class="desc-card">{{desc}}</p>
+            <div class="extra-content">
+                <span class="rate-score"><p>{{product?.rating?.rate}}</p></span>
+                <span class="rate-counting">({{product?.rating?.count}})</span>
+            </div>
         </div>
     </div>
     <div class="card-bottom">
         <button mat-button class="add2card-button">Add to card</button>
     </div>
-
 </div>
 
 <!-- <mat-card class="example-card" appearance="outline">

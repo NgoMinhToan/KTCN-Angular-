@@ -7,6 +7,14 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit, OnChanges {
   value = '';
+  searchList: string[] = [
+    'LN Hyouka',
+    'Acer Nitro 5 2022',
+    'Camera Ezviz C3N',
+    'Thẻ nhớ 32gb',
+    'Candy bay 12.7mm',
+    'Đầu đọc USB'
+  ]
 
   constructor() { }
 

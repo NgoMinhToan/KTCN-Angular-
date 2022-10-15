@@ -14,8 +14,12 @@ import { MatCardModule } from '@angular/material/card'
 import { MatButtonModule } from '@angular/material/button'
 import { MatInputModule } from '@angular/material/input'
 import { MatIconModule } from '@angular/material/icon'
+import { MatChipsModule } from '@angular/material/chips'
+import { MatRippleModule } from '@angular/material/core';
+
 import { StoreApiService } from './services/StoreApi.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SecondaryHeaderComponent } from './secondary-header/secondary-header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    SecondaryHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatIconModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatChipsModule,
+    MatRippleModule
   ],
   providers: [
     StoreApiService

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { map, tap } from 'rxjs';
 import { Product } from '../models/Product';
 import { StoreApiService } from '../services/StoreApi.service';
@@ -9,9 +9,15 @@ import { StoreApiService } from '../services/StoreApi.service';
   styleUrls: ['./home.component.scss'],
   providers: [StoreApiService]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnChanges {
   productList: Product[] = []
   constructor(private storeService: StoreApiService) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    // if (changes.hasOwnProperty('productList')) {
+    //   let data = changes['productList'].currentValue
+    //   this.productList = data
+    // }
+  }
 
   ngOnInit(): void {
     this.storeService.getProduct().pipe(

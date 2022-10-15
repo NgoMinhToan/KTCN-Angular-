@@ -1,7 +1,7 @@
 @import '../../assets/scss/responsive';
 
 .app-home {
-    margin-top: 80px;
+    // margin-top: 80px;
     background-color: rgba(128, 128, 128, 0.25);
     display: flex;
     width: 100%;
@@ -15,21 +15,29 @@
         align-content: flex-start;
         align-items: center;
         width: 80%;
+        transition: all .5s ease-in-out;
 
         .product-item {
             padding: 10px 5px;
             // flex-grow: 1;
             // flex-shrink: 1;
+            transition: all .5s ease-in-out;
 
             width: 100%;
+
             @include Responsive(XS) {
                 width: 50%;
             }
+
             @include Responsive(SM) {
                 width: 33%;
             }
+
             @include Responsive(MD) {
                 width: 25%;
+            }
+            @include Responsive(XL) {
+                width: 20%;
             }
         }
     }
