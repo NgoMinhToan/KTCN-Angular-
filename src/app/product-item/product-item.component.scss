@@ -1,0 +1,81 @@
+@import '../../assets/scss/responsive';
+
+.example-card {
+    margin-left: 10px;
+    min-width: 250px;
+    max-width: 300px;
+
+    .card-header-image {
+        background-size: cover;
+    }
+}
+
+.card-item {
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 0px #00000033;
+    transition: all 0.1s ease-in-out;
+    border: 3px solid transparent;
+
+    &:hover {
+        box-shadow: 1px 20px 20px 5px #00000054;
+        transform: translateY(-30px) scale(1.1);
+        border: 3px solid rgba(255, 0, 0, 0.3);
+    }
+
+    .card-logo {
+        width: 100%;
+        height: 150px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .card-body {
+        background: white;
+        padding: 5px;
+
+        p.title-card {
+            font-size: 1rem;
+            font-weight: 500;
+            height: 40px;
+            padding: 10px;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+
+        }
+
+        p.desc-card {
+            font-size: .8rem;
+            height: 50px;
+            padding: 5px;
+            // white-space: nowrap;
+            // overflow: hidden !important;
+            // text-overflow: ellipsis;
+        }
+
+        .extra-content {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    .card-bottom {
+        width: 100%;
+        height: fit-content;
+
+        button.add2card-button {
+            width: 100%;
+            height: 100%;
+            background: rebeccapurple;
+            color: white;
+            border-radius: 0;
+        }
+    }
+}

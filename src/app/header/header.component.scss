@@ -1,0 +1,83 @@
+@import './../../assets/scss/responsive';
+
+
+.header-container {
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+
+    .logo {
+        width: 100px;
+        float: left;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .center-header {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0 20px;
+
+        .top-header {
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            .input-search {
+                min-width: 350px;
+                max-width: 600px;
+                width: 80%;
+            }
+
+            ::ng-deep {
+                &.mat-form-field-should-float .mat-form-field-label {
+                    transform: translateY(-1.1em) scale(.75);
+                    width: 133.33333%;
+                }
+
+                .mat-form-field-wrapper {
+                    padding: 0;
+
+                    .mat-form-field-flex {
+                        .mat-form-field-infix {
+                            padding: 0.4em 0px !important;
+                        }
+
+                        .mat-form-field-label-wrapper {
+                            top: -1.5em;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .bottom-header {
+            height: 30%;
+        }
+    }
+
+    .right-header {
+        width: max(20%, 200px);
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            margin-left: 10px;
+        }
+    }
+}

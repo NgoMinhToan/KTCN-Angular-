@@ -1,0 +1,36 @@
+<div class="card-item">
+    <div class="card-logo">
+        <img mat-card-image class="card-header-image" [src]="product?.image" alt="Item photo">
+    </div>
+    <div class="card-body">
+        <p class="title-card">
+            {{title}}
+        </p>
+        <p class="desc-card">{{desc}}</p>
+        <div class="extra-content">
+            <span>Luot mua: {{product?.rating?.count}}</span>
+            <span>Rating: {{product?.rating?.rate}}</span>
+        </div>
+    </div>
+    <div class="card-bottom">
+        <button mat-button class="add2card-button">Add to card</button>
+    </div>
+
+</div>
+
+<!-- <mat-card class="example-card" appearance="outline">
+    <img mat-card-image class="card-header-image" src="../../assets/images/steve.jpg" alt="Item photo">
+    <mat-card-header>
+        <mat-card-title>Product name</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, nisi!
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>Add to card</button>
+        <button mat-button>562 da mua</button>
+    </mat-card-actions>
+</mat-card> -->
